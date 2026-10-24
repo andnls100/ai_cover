@@ -5,7 +5,9 @@ from ai_cover.steps import separate, convert_voice, mix_audio
 
 ROOT = Path(__file__).resolve().parent
 INPUT = ROOT / "input.mp3"
-MODEL = ROOT / "model" / "my.pth"
+MODEL_DIR = ROOT / "model"
+MODEL = MODEL_DIR / "tt.pth"
+INDEX = MODEL_DIR / "tt.index"
 OUTPUT = ROOT / "output"
 
 
@@ -14,6 +16,8 @@ def main() -> None:
         raise FileNotFoundError(f"找不到输入歌曲：{INPUT}")
     if not MODEL.is_file():
         raise FileNotFoundError(f"找不到 RVC 模型：{MODEL}")
+    if not INDEX.is_file():
+        raise FileNotFoundError(f"找不到 RVC 索引：{INDEX}")
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
 
@@ -25,7 +29,7 @@ def main() -> None:
         },
         "rvc": {
             "model_path": str(MODEL),
-            "index_path": "",
+            "index_path": str(INDEX),
             "version": "v2",
             "device": "cuda:0",
             "f0_method": "rmvpe",
