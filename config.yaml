@@ -1,6 +1,6 @@
 # ai_cover 配置文件：改完直接运行  python main.py  (或 python main.py -c 其他.yaml)
 
-input_video: "D:/videos/demo.mp4"     # 输入视频路径
+input_video: "H:/ai_cover/input.mp4"     # 输入视频路径
 output_dir: "output"                   # 输出根目录，每个视频会建一个子目录
 resume: true                           # true: 中间产物已存在则跳过该步骤；false: 全部重跑
 
