@@ -1,5 +1,6 @@
+-i https://pypi.org/simple 
 pyyaml>=6.0
 demucs>=4.0.1
 rvc-python>=0.1.5
-# torch 请按你的 CUDA 版本从 https://pytorch.org 安装，再装上面的包
-# 另需系统安装 ffmpeg 并加入 PATH
+# torch �밴��� CUDA �汾�� https://pytorch.org ��װ����װ����İ�
+# ����ϵͳ��װ ffmpeg ������ PATH
