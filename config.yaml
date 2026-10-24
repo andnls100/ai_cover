@@ -11,8 +11,8 @@ separation:                            # 人声 / 伴奏分离 (Demucs)
   device: "cuda"                       # cuda 或 cpu
 
 rvc:                                   # 人声克隆 (RVC 推理)
-  model_path: "D:/models/my_voice.pth" # 训练好的 RVC 模型 .pth
-  index_path: "D:/models/my_voice.index"  # 可为空 ""，不用检索索引
+  model_path: "model/tt.pth"           # 项目根目录 model/tt.pth
+  index_path: "model/tt.index"         # 项目根目录 model/tt.index
   version: "v2"                        # 模型版本 v1 / v2
   device: "cuda:0"
   f0_method: "rmvpe"                   # rmvpe / harvest / crepe / pm
