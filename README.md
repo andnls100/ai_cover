@@ -1,5 +1,4 @@
 # ai_cover
-
 AI 翻唱工具，支持视频翻唱和纯音频翻唱。
 
 - 视频模式：提取音频 → Demucs 分离人声/伴奏 → RVC 人声转换 → 混音 → 合成回视频。
@@ -11,9 +10,13 @@ AI 翻唱工具，支持视频翻唱和纯音频翻唱。
 2. 按 CUDA 版本从 https://pytorch.org 安装 torch
 3. `pip install -r requirements.txt`
 
+将 RVC 文件放在项目根目录的 `model` 文件夹中：
+- `model/tt.pth`：RVC 模型
+- `model/tt.index`：RVC 索引
+
 ## 视频模式（默认，保留原逻辑）
 
-编辑 `config.yaml`（视频路径、RVC 模型 .pth/.index、变调等），然后运行：
+编辑 `config.yaml`（视频路径、变调等），然后运行：
 
     python main.py
     python main.py -c other.yaml
@@ -23,7 +26,7 @@ AI 翻唱工具，支持视频翻唱和纯音频翻唱。
 
 ## 纯音频模式
 
-将完整歌曲放在项目根目录并命名为 `input.mp3`，将 RVC 模型放在 `model/my.pth`，然后运行：
+将完整歌曲放在项目根目录并命名为 `input.mp3`，确认 `model/tt.pth` 和 `model/tt.index` 存在，然后运行：
 
     python main.py --mode audio
 
