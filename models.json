@@ -5,7 +5,7 @@
 
 {
       "name": "saluki-27b",
-       "base_url": "https://against-shine-epson-tomatoes.trycloudflare.com/v1",
+       "base_url": "http://127.0.0.1:8081/v1",
       "api_key": "saluki-klwjeejklrkjrkejkljrkew",
        "model": "saluki-27b"
 	 
