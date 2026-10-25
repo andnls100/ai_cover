@@ -36,7 +36,7 @@
     {
       "name": "z-vl",
       "base_url": "https://open.bigmodel.cn/api/paas/v4",
-      "api_key": "5724a6738fe74e488ca0440523473836.VDRZMaAxaxJjYLE2",
+      "api_key": "",
       "model": "glm-5.3-flashx"
     }
   ],
