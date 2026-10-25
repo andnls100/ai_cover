@@ -13,23 +13,8 @@
 	 {
       "name": "zqwen",
        "base_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
-      "api_key":"",
+      "api_key":"rtetr",
       "model": "qwen3.8-27b"
-    },
-	{
-      "name": "zqwen2",
-       "base_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
-      "api_key":"",
-      "model": "qwen3.8-flash"
-	 
-    },
-	
-
-	 {
-      "name": "zqwen3",
-       "base_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
-      "api_key":"",
-      "model": "kimi-k3"
     } 
   ],
   "vision": [
@@ -44,14 +29,14 @@
   {
       "name": "s-image1",
       "base_url": "https://ws-fdkf90v9od25q0yo.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
-      "api_key": "",
+      "api_key": "sd",
       "model": "qwen-image-2.0"
     },
 	   
 	{
       "name": "s-image",
       "base_url": "https://api.siliconflow.cn/v1",
-      "api_key": "",
+      "api_key": "sds",
       "model": "Qwen/Qwen-Image"
     }
 	
@@ -67,7 +52,7 @@
 	  "provider": "cosyvoice_tts",
       "speech_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/api/v1/services/audio/tts/SpeechSynthesizer",
       "voice_design_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/api/v1/services/audio/tts/customization",
-	  "api_key": "",
+	  "api_key": "dasdsa",
       "model": "cosyvoice-v3.5-flash",
        "response_format": "mp3",
       "sample_rate": 24000,
