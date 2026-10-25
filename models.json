@@ -9,13 +9,8 @@
       "api_key": "saluki-klwjeejklrkjrkejkljrkew",
        "model": "saluki-27b"
 	 
-    },
-	 {
-      "name": "zqwen",
-       "base_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
-      "api_key":"rtetr",
-      "model": "qwen3.8-27b"
-    } 
+    }
+	 
   ],
   "vision": [
     {
