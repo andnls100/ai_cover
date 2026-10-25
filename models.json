@@ -1,0 +1,76 @@
+{
+  "strategy": "failover",
+  "cooldown": 120,
+  "text": [
+
+	{
+      "name": "zqwen2",
+       "base_url": "https://127.0.0.1:8081/v1",
+      "api_key": "saluki-klwjeejklrkjrkejkljrkew",
+      "model": "saluki-27b"
+	 
+    }
+ 
+  ],
+  "vision": [
+    {
+      "name": "z-vl",
+      "base_url": "https://open.bigmodel.cn/api/paas/v4",
+      "api_key": "ewrewrer",
+      "model": "glm-5.3-flashx"
+    }
+  ],
+  "image": [
+  {
+      "name": "s-image1",
+      "base_url": "https://ws-fdkf90v9od25q0yo.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "api_key": "qweqwe",
+      "model": "qwen-image-2.0"
+    },
+	 
+  ],
+  "image_style": {
+    "look": "动漫",
+    "character_mode": "portrait",
+    "negative": "omit"
+  },
+  "audio": [
+    {
+      "name": "TTS",
+	  "provider": "cosyvoice_tts",
+      "speech_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/api/v1/services/audio/tts/SpeechSynthesizer",
+      "voice_design_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/api/v1/services/audio/tts/customization",
+	  "api_key": "sk-ewrewreLPxRnOkA",
+      "model": "cosyvoice-v3.5-flash",
+       "response_format": "mp3",
+      "sample_rate": 24000,
+      "voice_language_hints": ["zh"],
+      "language_hints": ["zh"],
+      "voice_preview_text": "你好，我是这个故事中的角色，很高兴认识你。",
+      "timeout": 120
+    }
+  ],
+     "video": [
+ {
+      "key": "comfyui_h3",
+      "name": "ComfyUI H3（远程）",
+      "adapter": "comfyui",
+      "enabled": true,
+      "active": false,
+      "base_url": "https://slot-comply-nature-participated.trycloudflare.com/",
+      "workflow_ref": "workflow/kaggle_h3_ref2va.json",
+      "workflow_i2v": "workflow/MiniMax_H3_Fast_I2V.json",
+      "max_refs": 6,
+      "size_preset": "360p",
+      "max_seconds": 10,
+      "headers": {},
+      "timeout": 120,
+      "poll_interval": 10,
+      "max_wait": 3600,
+      "note": "ComfyUI 后端：新场景第一镜用 Ref2VA（场景+角色+道具，最多 max_refs 张，超出自动拼图），连续镜头用 I2V（上一镜最后一帧当首帧）。工作流必须是 API 格式导出。隧道地址变了只改 base_url。启用：enabled 改 true，命令加 --video-model comfyui_h3。"
+    } 
+  
+    
+  ]
+ 
+}
