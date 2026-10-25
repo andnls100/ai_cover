@@ -2,15 +2,12 @@
   "strategy": "failover",
   "cooldown": 120,
   "text": [
-
 	{
       "name": "zqwen2",
-       "base_url": "https://127.0.0.1:8081/v1",
+       "base_url":"https://127.0.0.1:8081/v1",
       "api_key": "saluki-klwjeejklrkjrkejkljrkew",
       "model": "saluki-27b"
-	 
     }
- 
   ],
   "vision": [
     {
