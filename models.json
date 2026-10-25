@@ -2,18 +2,41 @@
   "strategy": "failover",
   "cooldown": 120,
   "text": [
+
+{
+      "name": "saluki-27b",
+       "base_url": "https://against-shine-epson-tomatoes.trycloudflare.com/v1",
+      "api_key": "saluki-klwjeejklrkjrkejkljrkew",
+       "model": "saluki-27b"
+	 
+    },
+	 {
+      "name": "zqwen",
+       "base_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "api_key":"",
+      "model": "qwen3.8-27b"
+    },
 	{
       "name": "zqwen2",
-       "base_url":"https://127.0.0.1:8081/v1",
-      "api_key": "saluki-klwjeejklrkjrkejkljrkew",
-      "model": "saluki-27b"
-    }
+       "base_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "api_key":"",
+      "model": "qwen3.8-flash"
+	 
+    },
+	
+
+	 {
+      "name": "zqwen3",
+       "base_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+      "api_key":"",
+      "model": "kimi-k3"
+    } 
   ],
   "vision": [
     {
       "name": "z-vl",
       "base_url": "https://open.bigmodel.cn/api/paas/v4",
-      "api_key": "ewrewrer",
+      "api_key": "5724a6738fe74e488ca0440523473836.VDRZMaAxaxJjYLE2",
       "model": "glm-5.3-flashx"
     }
   ],
@@ -21,10 +44,17 @@
   {
       "name": "s-image1",
       "base_url": "https://ws-fdkf90v9od25q0yo.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
-      "api_key": "qweqwe",
+      "api_key": "",
       "model": "qwen-image-2.0"
+    },
+	   
+	{
+      "name": "s-image",
+      "base_url": "https://api.siliconflow.cn/v1",
+      "api_key": "",
+      "model": "Qwen/Qwen-Image"
     }
-	 
+	
   ],
   "image_style": {
     "look": "动漫",
@@ -37,7 +67,7 @@
 	  "provider": "cosyvoice_tts",
       "speech_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/api/v1/services/audio/tts/SpeechSynthesizer",
       "voice_design_url": "https://llm-yygg5z4v26uyzh2y.cn-beijing.maas.aliyuncs.com/api/v1/services/audio/tts/customization",
-	  "api_key": "sk-ewrewreLPxRnOkA",
+	  "api_key": "",
       "model": "cosyvoice-v3.5-flash",
        "response_format": "mp3",
       "sample_rate": 24000,
@@ -65,8 +95,27 @@
       "poll_interval": 10,
       "max_wait": 3600,
       "note": "ComfyUI 后端：新场景第一镜用 Ref2VA（场景+角色+道具，最多 max_refs 张，超出自动拼图），连续镜头用 I2V（上一镜最后一帧当首帧）。工作流必须是 API 格式导出。隧道地址变了只改 base_url。启用：enabled 改 true，命令加 --video-model comfyui_h3。"
-    } 
-  
+    },
+ {
+	  "key": "wan_r3",
+	  "name": "wan3.0-video-prime",
+	  "adapter": "aliyun_wan",
+	  "enabled": true,
+	  "active": false,
+	  "submit_url": "https://ws-fdkf90v9od25q0yo.cn-beijing.maas.aliyuncs.com/api/v1/services/aigc/video-generation/video-synthesis",
+	  "status_url_template": "https://ws-fdkf90v9od25q0yo.cn-beijing.maas.aliyuncs.com/api/v1/tasks/{task_id}",
+	  "workspace_id": "ws-fdkf90v9od25q0yo",
+	  "api_key": "",
+	  "model": "wan3.0-video",
+	  "resolution": "720P",
+      "ratio": "16:9",
+      "prompt_extend": false,
+      "timeout": 120,
+      "poll_interval": 15,
+      "max_wait": 1800,
+      "note": "Wan R2V：参考图自动从当前分镜引用的 character/art 资产读取，不在 models.json 中配置参考图；使用 --video-model wan_r2v。"
+	   
+	}
     
   ]
  
